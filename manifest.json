@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Manager",
+  "version": "1.0.0",
+  "description": "Store, manage, and reuse text prompts with optional Notion integration",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["storage", "clipboardWrite"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
+

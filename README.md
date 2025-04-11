@@ -48,7 +48,7 @@ A powerful Chrome extension for managing and reusing text prompts with optional 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/prompt-manager.git
+   git clone https://github.com/ryadav96/ai-prompt-manager.git
    ```
 
 2. Install dependencies:

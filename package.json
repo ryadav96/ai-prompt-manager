@@ -1,7 +1,21 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "ai-prompt-manager",
+  "version": "1.0.0",
   "private": true,
+  "description": "A powerful Chrome extension for managing and reusing text AI prompts with optional Notion integration. Developed using React, TypeScript,Shadcn UI and Tailwind CSS.",
+  "author": "Rakesh Yadav",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryadav96/ai-prompt-manager.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "prompt-manager",
+    "ai-prompt-manager",
+    "notion",
+    "react",
+    "typescript"
+  ],
   "scripts": {
     "build": "tsc && vite build",
     "build:ext": "tsc && vite build && cp public/manifest.json dist/ && mkdir -p dist/icons && cp public/icons/* dist/icons/",

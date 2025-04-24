@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ModeToggle } from "./components/mode-toggle";
 import PromptList from "./components/prompt-list";
@@ -58,6 +58,8 @@ function App() {
   const [useRedesignedUI, setUseRedesignedUI] = useState(true); // Set to true to use the redesigned UI
   const [activeTab, setActiveTab] = useState("prompts");
   const { toast } = useToast();
+  const [addPromptInitialContent, setAddPromptInitialContent] = useState("");
+  const addPromptOpenedRef = useRef(false);
 
   // Load prompts and settings
   useEffect(() => {
@@ -103,6 +105,18 @@ function App() {
 
     filterPrompts();
   }, [searchQuery, selectedTags, prompts]);
+
+  useEffect(() => {
+    chrome.storage?.local.get(["tempPrompt"], (result) => {
+      if (result.tempPrompt) {
+        setAddPromptInitialContent(result.tempPrompt);
+        chrome.storage.local.remove("tempPrompt");
+        if (activeTab !== "add") setActiveTab("add");
+      } else if (activeTab !== "add") {
+        setAddPromptInitialContent("");
+      }
+    });
+  }, [activeTab]);
 
   const handleAddPrompt = async (newPrompt: Prompt) => {
     try {
@@ -357,6 +371,7 @@ function App() {
               <AddPrompt
                 onAdd={handleAddPrompt}
                 availableTags={availableTags}
+                initialContent={addPromptInitialContent}
               />
             </div>
           </div>
@@ -552,6 +567,7 @@ function App() {
                 <AddPrompt
                   onAdd={handleAddPrompt}
                   availableTags={availableTags}
+                  initialContent={addPromptInitialContent}
                 />
               </div>
             </ScrollArea>

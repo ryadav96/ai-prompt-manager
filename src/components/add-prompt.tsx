@@ -40,6 +40,7 @@ interface AddPromptProps {
   availableTags: string[];
   className?: string;
   onBack?: () => void;
+  initialContent?: string;
 }
 
 export default function AddPrompt({
@@ -47,9 +48,10 @@ export default function AddPrompt({
   availableTags,
   className,
   onBack,
+  initialContent = "",
 }: AddPromptProps) {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState(initialContent);
   const [tags, setTags] = useState<string[]>([]);
   const [newTag, setNewTag] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);

@@ -90,7 +90,7 @@ export default function PromptListRedesigned({
   const [newTag, setNewTag] = useState("");
   const [open, setOpen] = useState(false);
   const [favorites, setFavorites] = useState<string[]>([]);
-  const [viewMode, setViewMode] = useState<"list" | "grid">("list");
+  const [viewMode, setViewMode] = useState<"list" | "grid">("grid");
 
   // Filter prompts when tab changes or search query updates
   useEffect(() => {

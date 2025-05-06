@@ -14,49 +14,82 @@ A powerful Chrome extension for managing and reusing text prompts with optional 
 ## Screenshots
 
 ### Main Interface
+
 ![Prompt List View](images/prompt-list.png)
-*View and manage all your prompts in one place*
+_View and manage all your prompts in one place_
 
 ### Adding New Prompts
+
 ![Add New Prompt](images/add-new-prompt.png)
-*Easily create new prompts with a clean interface*
+_Easily create new prompts with a clean interface_
 
 ### Filtering and Search
+
 ![Filter Prompts](images/filter-prompt.png)
-*Quickly find the prompt you need with powerful filtering*
+_Quickly find the prompt you need with powerful filtering_
 
 ### Managing Prompts
+
 ![Edit Prompt](images/edit-prompt.png)
-*Edit existing prompts with a simple interface*
+_Edit existing prompts with a simple interface_
 
 ![Delete Prompt](images/delete-prompt.png)
-*Safely remove prompts you no longer need*
+_Safely remove prompts you no longer need_
 
 ### Viewing Prompts
+
 ![View Prompt](images/view-prompt.png)
-*View prompt details in a clean, readable format*
+_View prompt details in a clean, readable format_
+
+## 🚀 Upcoming Features
+
+- [x] **Add Prompt via Context Menu**  
+      Quickly add new prompts directly from the right-click context menu.
+
+- [ ] **Notion Integration**  
+      Seamlessly sync and manage your prompts within Notion.
+      (Coming soon!)
+- [ ] **Import & Export Prompts**  
+      Easily back up and transfer your prompt library.
+      (Coming soon!)
+
+- [ ] **Cross-Browser Support**  
+      Extend compatibility to Chrome, Firefox, Edge, and more.
+      (Coming soon!)
+
+- [ ] **Prompt Color Coding**  
+      Organize and identify prompts faster with custom color tags.
+
+- [ ] **Smart Suggestions**  
+      Get intelligent prompt recommendations based on your usage patterns.
 
 ## Installation
 
-### From Chrome Web Store (Coming Soon)
+<!-- https://chromewebstore.google.com/detail/prompt-manager/ecgpejhpjiednknijpjeindhohflaibf?authuser=0&hl=en-GB -->
 
-1. Visit the Chrome Web Store
-2. Search for "Prompt Manager"
-3. Click "Add to Chrome"
+### From Chrome Web Store
+
+1. Open the [Chrome Web Store](https://chrome.google.com/webstore/detail/prompt-manager/ecgpejhpjiednknijpjeindhohflaibf)
+2. Click "Add to Chrome"
+3. Confirm the installation by clicking "Add extension"
+4. Once installed, you can find the extension icon in the Chrome toolbar.
 
 ### Manual Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/ryadav96/ai-prompt-manager.git
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Build the extension:
+
    ```bash
    pnpm build:ext
    ```
@@ -121,4 +154,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-If you find this extension helpful, please consider giving it a star on GitHub! 
+If you find this extension helpful, please consider giving it a star on GitHub!
